@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Задание 6
+{% endblock title %}
+
+{% block content %}
+    <div class="container-sm m-3">
+        {% if name and result %}
+            <div class="alert pb-3 alert-{{ color }}">
+                {{ name }}, вы ввели {{ result }}
+            </div>
+        {% endif %}
+
+        <form method=post>
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Ваше имя</label>
+                <input type="text" class="form-control" id="nameInput" name="name" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="ageInput" class="form-label">Возраст</label>
+                <input type="number" class="form-control" id="ageInput" aria-describedby="ageHelp" name="age">
+                <div id="ageHelp" class="form-text">Возраст должен быть целым числом больше 0</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+{% endblock content %}

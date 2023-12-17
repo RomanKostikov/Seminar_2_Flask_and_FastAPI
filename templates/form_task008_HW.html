@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Задание 8
+{% endblock title %}
+
+{% block content %}
+    <div class="container-sm m-3">
+        <form method=post>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Ваше имя</label>
+                <input type="text" class="form-control" id="nameInput" name="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+{% endblock content %}

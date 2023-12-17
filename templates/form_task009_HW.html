@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Задание 9
+{% endblock title %}
+
+{% block content %}
+    <form method=post class="mx-3">
+        <div class="my-3">
+            <label for="emailInput" class="form-label">Логин</label>
+            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" name="email">
+            <div id="emailHelp" class="form-text">Примеры почты: admin@mail.com, user@mail.com</div>
+        </div>
+        <div class="mb-3">
+            <label for="passwordInput" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="passwordInput" aria-describedby="passwordHelp" ,
+                   name="password">
+            <div id="passwordHelp" class="form-text">Примеры паролей: admin, 12345</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+{% endblock content %}

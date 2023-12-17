@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Задание 7
+{% endblock title %}
+
+{% block content %}
+    <div class="container-sm m-3">
+        {% if result %}
+            <div class="alert pb-3 alert-{{ color }}">
+                {{ result }}
+            </div>
+        {% endif %}
+
+        <form method=post>
+            <div class="mb-3">
+                <label for="ageInput" class="form-label">Число</label>
+                <input type="number" class="form-control" id="ageInput" aria-describedby="ageHelp" name="number"
+                       step="0.01">
+                <div id="ageHelp" class="form-text">Ввод должен быть числом</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+{% endblock content %}

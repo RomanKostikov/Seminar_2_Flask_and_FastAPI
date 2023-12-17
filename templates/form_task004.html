@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container m-3">
+    {% if text %}
+    <div class="container mb-3">
+        <p>Текст: {{ text }} </p>
+        <p>Кол-во слов: {{ length }} </p>
+    </div>
+    {% endif %}
+
+    <form method=post>
+        <input type="text", name="input">
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+{% endblock content %}

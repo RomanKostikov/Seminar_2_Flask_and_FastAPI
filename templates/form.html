@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container m-3">
+        <form action="/form" method="post" enctype="multipart/form-data">
+            <input type="file", name="file">
+            <input type="submit" value="Сохранить">
+        </form>
+    </div>
+{% endblock content %}

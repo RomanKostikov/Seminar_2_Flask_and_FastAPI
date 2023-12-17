@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container m-3">
+    <img src="{{ url_for('static', filename='image/foto.jpg') }} " alt="Моё фото" width="300">
+    <a class="mt-4" href="{{ url_for('form_get') }}">Перейти к форме</a>
+</div>
+{% endblock content %}
